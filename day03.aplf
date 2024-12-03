@@ -1,4 +1,10 @@
 day03←{
+    ⍝ part 1
+
     input←⊃⎕NGET 'input03.txt' 1
     +/⍎¨(','⎕R'×')('mul'⎕R'')('mul\(\d+,\d+\)'⎕S'&')input
+
+    ⍝ part 2
+    
+    +/⍎¨(','⎕R'×')('mul'⎕R'')('mul\(\d+,\d+\)'⎕S'&')('don''t\(\).*'⎕R'')('don''t\(\).*?do\(\)'⎕R'')∊input
     }
